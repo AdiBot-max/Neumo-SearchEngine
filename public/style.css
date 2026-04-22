@@ -1,0 +1,101 @@
+:root {
+  --base: hsl(215, 11%, 22%);
+  --light: hsl(215, 11%, 28%);
+  --lighter: hsl(215, 11%, 35%);
+  --dark: hsl(215, 11%, 16%);
+  --darker: hsl(215, 11%, 12%);
+  --text: hsl(215, 11%, 85%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--base);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 520px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 20px;
+  background: var(--base);
+  box-shadow: 
+    10px 10px 20px var(--dark),
+    -10px -10px 20px var(--light);
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: var(--lighter);
+}
+
+button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 14px;
+  background: var(--base);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 
+    6px 6px 12px var(--dark),
+    -6px -6px 12px var(--light);
+}
+
+button:active {
+  box-shadow: 
+    inset 6px 6px 12px var(--dark),
+    inset -6px -6px 12px var(--light);
+}
+
+.results {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.result {
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: var(--base);
+  box-shadow: 
+    6px 6px 12px var(--dark),
+    -6px -6px 12px var(--light);
+}
+
+.result a {
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}
